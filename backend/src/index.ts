@@ -32,4 +32,8 @@ app.use('/api/user', userRoutes);
 
 app.get('/api/health', (_, res) => res.json({ status: 'ok' }));
 
-app.listen(PORT, () => console.log(`✅ NEPSE API Server running on port ${PORT}`));
+console.log('[boot] node:', process.version);
+console.log('[boot] cwd:', process.cwd());
+console.log('[boot] PORT env:', process.env.PORT || '(unset)');
+
+app.listen(Number(PORT), '0.0.0.0', () => console.log(`✅ NEPSE API Server running on port ${PORT}`));
