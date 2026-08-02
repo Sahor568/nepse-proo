@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { TrendingUp, TrendingDown, Activity, DollarSign, BarChart2, ChevronRight, Clock, Loader2 } from 'lucide-react';
 import { NEPSE_BASE } from '../apiConfig';
 

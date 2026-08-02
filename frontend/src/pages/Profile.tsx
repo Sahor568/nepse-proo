@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { User, Mail, Phone, Lock, Save, Eye, EyeOff, Shield, Bell, Monitor, Moon, LogOut, Sun, Heart } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { API_BASE, authFetch } from '../apiConfig';
 
 const Section = ({ title, children }: any) => (

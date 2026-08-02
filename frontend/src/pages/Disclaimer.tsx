@@ -1,5 +1,5 @@
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const Disclaimer = () => {
   const navigate = useNavigate();

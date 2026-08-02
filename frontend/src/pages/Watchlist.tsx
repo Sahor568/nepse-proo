@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Star, Bell, BellOff, Trash2, TrendingUp, TrendingDown, LayoutGrid, List, Search, Plus, Loader2 } from 'lucide-react';
 import StockSearch from '../components/StockSearch';
 import { NEPSE_BASE, API_BASE, authFetch } from '../apiConfig';

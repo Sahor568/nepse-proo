@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Briefcase, Edit2, DollarSign, TrendingUp, TrendingDown, Loader2, ShoppingCart, ArrowUpRight, ArrowDownLeft } from 'lucide-react';
 import StockSearch from '../components/StockSearch';
 import { NEPSE_BASE, API_BASE, authFetch } from '../apiConfig';

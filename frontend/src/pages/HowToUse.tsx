@@ -1,5 +1,5 @@
 import { ArrowLeft, UserPlus, LogIn, Search, Star, Briefcase, LineChart, Bell, Eye } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const steps = [
   {

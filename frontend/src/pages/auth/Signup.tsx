@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router';
 import { User, Mail, Phone, Lock, Eye, EyeOff, ArrowRight, ShieldCheck, MailCheck, BarChart2 } from 'lucide-react';
 import { AUTH_BASE } from '../../apiConfig';
 

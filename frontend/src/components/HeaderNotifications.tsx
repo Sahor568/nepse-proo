@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Bell, Briefcase, Activity, AlertCircle, PieChart, Info, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 import { NEPSE_BASE, API_BASE, authFetch } from '../apiConfig';
 

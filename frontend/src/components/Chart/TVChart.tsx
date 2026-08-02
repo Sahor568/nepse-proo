@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { createChart, ColorType, CrosshairMode, Time, IChartApi, ISeriesApi, CandlestickData, WhitespaceData, LineStyle, LineWidth } from 'lightweight-charts';
 import { Settings, Maximize2, BarChart2, TrendingUp, X, ChevronDown, Search, Loader2, Play, Sliders, Trash2 } from 'lucide-react';
 import { NEPSE_BASE } from '../../apiConfig';

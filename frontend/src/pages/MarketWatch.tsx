@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Search, TrendingUp, TrendingDown, Star, Activity, ChevronUp, ChevronDown, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { NEPSE_BASE } from '../apiConfig';
 
 type SortKey = 'lastTradedPrice' | 'percentageChange' | 'totalTradeQuantity' | 'symbol';

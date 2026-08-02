@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router';
 import Layout from './components/Layout';
 import PublicHeader from './components/PublicHeader';
 import Dashboard from './pages/Dashboard';
