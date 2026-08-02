@@ -1,4 +1,4 @@
-const DEFAULT_API_BASE = 'https://nepse-pro-backend.onrender.com/api';
+const DEFAULT_API_BASE = 'https://api.momoflix.xyz/api';
 
 export const API_BASE = import.meta.env.DEV
   ? 'http://localhost:5000/api'
