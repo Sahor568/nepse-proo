@@ -1,11 +1,11 @@
-import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import bcrypt from 'bcryptjs';
+import { NodeSqliteDriver } from './nodeSqliteDriver.js';
 
 export async function getDb() {
   return open({
     filename: './nepse.db',
-    driver: sqlite3.Database
+    driver: NodeSqliteDriver as unknown as new (filename: string) => any
   });
 }
 
