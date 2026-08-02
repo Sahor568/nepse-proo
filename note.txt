@@ -1,0 +1,7 @@
+We fixed it in two places.
+
+First, we stopped treating the NEPSE API payload like the displayed value was close. The library’s index type shows the live value in currentValue, while close is the previous close snapshot. So the UI was simply reading the wrong field. That change is in frontend/src/components/Layout.tsx, frontend/src/pages/Dashboard.tsx, and frontend/src/components/HeaderNotifications.tsx.
+
+Second, we kept the backend index fetch on nepse.getNepseIndex() but cached it under its own key for 60 seconds in backend/src/routes/nepseRoutes.ts, so the site is not hammering the API and the index is still refreshed regularly.
+
+I verified the frontend build and pushed the fix to GitHub on main.

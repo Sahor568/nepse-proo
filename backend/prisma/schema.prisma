@@ -1,0 +1,44 @@
+// Prisma schema - documents the DB structure (runtime uses sqlite package via db.ts)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int         @id @default(autoincrement())
+  name      String
+  email     String      @unique
+  password  String
+  mobile    String?
+  bio       String?
+  createdAt DateTime    @default(now())
+  watchlist Watchlist[]
+  portfolio Portfolio[]
+}
+
+model Watchlist {
+  id     Int    @id @default(autoincrement())
+  userId Int
+  symbol String
+  user   User   @relation(fields: [userId], references: [id])
+
+  @@unique([userId, symbol])
+}
+
+model Portfolio {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  symbol    String
+  name      String?
+  quantity  Float
+  buyPrice  Float
+  buyDate   String
+  reference String?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+}
