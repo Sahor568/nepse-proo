@@ -15,7 +15,7 @@ const OTP_EXPIRES = 10 * 60 * 1000;
 
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || '';
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET || '';
-const GOOGLE_CALLBACK_URL = process.env.GOOGLE_CALLBACK_URL || 'https://nepse-pro-backend.onrender.com/api/auth/google/callback';
+const GOOGLE_CALLBACK_URL = process.env.GOOGLE_CALLBACK_URL || 'https://api.momoflix.xyz/api/auth/google/callback';
 
 console.log('[Google OAuth] Checking config...');
 console.log('[Google OAuth] CLIENT_ID:', GOOGLE_CLIENT_ID ? 'SET' : 'MISSING');
@@ -574,7 +574,7 @@ router.get('/google', (req, res, next) => {
 router.get('/google/callback',
   (req, res, next) => {
     if (!GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET) {
-      return res.redirect('https://nepse-pro.vercel.app/login?error=google_not_configured');
+      return res.redirect('https://momoflix.xyz/login?error=google_not_configured');
     }
     passport.authenticate('google', { failureRedirect: '/api/auth/google/failure' })(req, res, next);
   },
@@ -584,7 +584,7 @@ router.get('/google/callback',
 
     sendGoogleUsageEmail(user.email, user.name);
 
-    const frontendUrl = process.env.FRONTEND_URL || 'https://nepse-pro.vercel.app';
+    const frontendUrl = process.env.FRONTEND_URL || 'https://momoflix.xyz';
     res.redirect(`${frontendUrl}/auth/callback?token=${token}&userId=${user.id}&name=${encodeURIComponent(user.name)}&email=${encodeURIComponent(user.email)}&provider=${user.provider || 'google'}`);
   }
 );
